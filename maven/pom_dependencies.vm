@@ -17,17 +17,17 @@
 			<version>4.3.1.Final</version>
 		</dependency>
 
-		<!-- scope provided because the processor is only needed at compile time -->
+		<!-- Mapper for mapping JpaRecord - Record -->
 		<dependency>
-			<groupId>fr.xebia.extras</groupId>
-			<artifactId>selma-processor</artifactId>
-			<version>1.0</version>
-			<scope>provided</scope>
+			<groupId>org.modelmapper</groupId>
+			<artifactId>modelmapper</artifactId>
+			<version>0.6.2</version>
 		</dependency>
 
-		<!-- This is the only real dependency you will have in your binaries -->
+		<!-- H2 JDBC driver for JUnit tests -->
 		<dependency>
-			<groupId>fr.xebia.extras</groupId>
-			<artifactId>selma</artifactId>
-			<version>1.0</version>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>1.4.181</version>
+			<scope>test</scope>
 		</dependency>
