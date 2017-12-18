@@ -1,0 +1,17 @@
+#parse("include/init_var_global.vm")
+#parse("include/java_header.vm")
+
+import ${jpaMapperPackage}.modelmapper.JpaMapperProviderImpl;
+
+/**
+ * Use this class to choose your prefered mapping implementation 
+ *
+ */
+public class JpaMapping {
+
+	private static JpaMapperProvider mapperProvider = new JpaMapperProviderImpl() ;
+	
+	public static JpaMapperProvider getMapperProvider() {
+		return mapperProvider;
+	}
+}

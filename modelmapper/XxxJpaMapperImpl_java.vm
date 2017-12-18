@@ -7,18 +7,18 @@
 ##--------------------------------------------------------------------------------------------------------
 
 import ${recordPackage}.${recordClass}; // "Neutral Record" class 
-import ${jpaMapperPackage}.${jpaMapperClass};
+import ${jpaMapperPackage}.JpaMapper;
 import ${jpaRecordPackage}.${jpaRecordClass}; // "JPA Entity" class 
 
 /**
  * Mapping between entity beans and display beans.
  */
-public class ${jpaMapperClass}Impl extends GenericMapper implements ${jpaMapperClass} {
+public class ${jpaMapperClass} extends GenericMapper implements JpaMapper<${jpaRecordClass}, ${recordClass}> {
 
 	/**
 	 * Constructor.
 	 */
-	public ${jpaMapperClass}Impl() {
+	public ${jpaMapperClass}() {
 		super();
 	}
 
