@@ -4,3 +4,6 @@
 ## #set( $jpaCommonsPackage     = "${ROOT_PKG}.persistence.impl.jpa.commons" )
 #set( $jpaMapperPackage      = "${ROOT_PKG}.persistence.impl.jpa.mapping" )
 #set( $jpaRecordPackage      = "${ROOT_PKG}.persistence.impl.jpa.record" )
+##
+#set( $AUTHOR = "Telosys" )
+##

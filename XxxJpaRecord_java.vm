@@ -39,7 +39,7 @@ import $import;
  * Persistent class for "${entity.name}" entity stored in table "${entity.databaseTable}" <br>
  * This class is a "record entity" without JPA links  <br>
  *
- * @author Telosys Tools Generator
+ * @author $AUTHOR
  *
  */
 ##--- JPQL PK WHERE CLAUSE

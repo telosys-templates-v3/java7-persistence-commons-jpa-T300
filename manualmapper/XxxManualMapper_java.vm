@@ -8,6 +8,12 @@ import ${recordPackage}.${recordClass};
 import ${jpaMapperPackage}.JpaMapper;
 import ${jpaRecordPackage}.${jpaRecordClass};
 
+/**
+ * Manual mapping for "${entity.name}" 
+ *
+ * @author $AUTHOR
+ *
+ */
 public class ${entity.name}ManualMapper implements JpaMapper<${jpaRecordClass}, ${recordClass}> {
 
 	@Override

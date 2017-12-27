@@ -1,9 +1,11 @@
-## #parse("include/init_var_global.vm")
+#parse("include/init_var_global.vm")
 #parse("include/java_header.vm")
 package ${target.javaPackageFromFolder($SRC)};
 
 /**
  * Interface for mapping between JPA class and POJO class.
+ *
+ * @author $AUTHOR
  */
 public interface JpaMapper<JPA,POJO> {
 

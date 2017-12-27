@@ -19,7 +19,7 @@ import $import;
 /**
  * Composite primary key for entity "${entity.name}" ( stored in table "${entity.databaseTable}" )
  *
- * @author Telosys Tools Generator
+ * @author $AUTHOR
  *
  */
  @Embeddable

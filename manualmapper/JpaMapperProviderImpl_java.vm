@@ -5,6 +5,12 @@ package ${target.javaPackageFromFolder($SRC)};
 import ${jpaMapperPackage}.JpaMapper;
 import ${jpaMapperPackage}.JpaMapperProvider;
 
+/**
+ * Manual mapper provider
+ *
+ * @author $AUTHOR
+ *
+ */
 public class JpaMapperProviderImpl implements JpaMapperProvider {
 
 	private static final String RECORD = "Record" ;

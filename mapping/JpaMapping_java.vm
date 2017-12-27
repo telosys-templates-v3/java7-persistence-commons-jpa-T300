@@ -7,6 +7,8 @@ import ${jpaMapperPackage}.modelmapper.JpaMapperProviderImpl;
 /**
  * Use this class to choose your prefered mapping implementation 
  *
+ * @author $AUTHOR
+ *
  */
 public class JpaMapping {
 

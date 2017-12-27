@@ -1,3 +1,4 @@
+#parse("include/init_var_global.vm")
 #parse("include/java_header.vm")
 package ${target.javaPackageFromFolder($SRC)};
 
@@ -12,6 +13,7 @@ import org.modelmapper.convention.MatchingStrategies;
 /**
  * Generic abstract mapper for "ModelMapper" implementation.
  * 
+ * @author $AUTHOR
  */
 public class JpaMapperImpl<JPA, POJO> implements JpaMapper<JPA, POJO> {
 
