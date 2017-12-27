@@ -1,8 +1,8 @@
 #parse("include/java_header.vm")
 package ${target.javaPackageFromFolder($SRC)};
 
-import org.demo.persistence.impl.jpa.mapping.JpaMapper;
-import org.demo.persistence.impl.jpa.mapping.JpaMapperProvider;
+import ${jpaMapperPackage}.JpaMapper;
+import ${jpaMapperPackage}.JpaMapperProvider;
 
 public class JpaMapperProviderImpl implements JpaMapperProvider {
 

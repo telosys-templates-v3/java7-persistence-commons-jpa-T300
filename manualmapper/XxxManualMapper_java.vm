@@ -1,0 +1,37 @@
+#checkId($entity)
+#parse("include/init_var_global.vm")
+#parse("include/init_var_entity.vm")
+#parse("include/java_header.vm")
+package ${target.javaPackageFromFolder($SRC)};
+
+import ${recordPackage}.${recordClass};
+import ${jpaMapperPackage}.JpaMapper;
+import ${jpaRecordPackage}.${jpaRecordClass};
+
+public class ${entity.name}ManualMapper implements JpaMapper<${jpaRecordClass}, ${recordClass}> {
+
+	@Override
+	public ${recordClass} mapEntityToRecord(${jpaRecordClass} entity) {
+		${recordClass} pojo = new ${recordClass}();
+#foreach( $attribute in $entity.attributes )
+		pojo.${attribute.setter}(entity.${attribute.getter}()); 
+#end
+##		pojo.setId(entity.getId());
+##		pojo.setName(entity.getName());
+##		pojo.setDriver(entity.getDriver());
+		return pojo;
+	}
+
+	@Override
+	public ${jpaRecordClass} mapRecordToEntity(${recordClass} pojo) {
+		${jpaRecordClass} entity = new ${jpaRecordClass}();
+#foreach( $attribute in $entity.attributes )
+		entity.${attribute.setter}(pojo.${attribute.getter}()); 
+#end
+##		entity.setId(pojo.getId());
+##		entity.setName(pojo.getName());
+##		entity.setDriver(pojo.getDriver());
+		return entity;
+	}
+
+}
