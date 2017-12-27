@@ -1,4 +1,5 @@
 #parse("include/java_header.vm")
+package ${target.javaPackageFromFolder($SRC)};
 
 import org.demo.persistence.impl.jpa.mapping.JpaMapper;
 import org.demo.persistence.impl.jpa.mapping.JpaMapperProvider;

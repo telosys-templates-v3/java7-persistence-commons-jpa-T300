@@ -1,5 +1,6 @@
 #parse("include/init_var_global.vm")
 #parse("include/java_header.vm")
+package ${target.javaPackageFromFolder($SRC)};
 
 import ${jpaMapperPackage}.modelmapper.JpaMapperProviderImpl;
 
@@ -9,8 +10,23 @@ import ${jpaMapperPackage}.modelmapper.JpaMapperProviderImpl;
  */
 public class JpaMapping {
 
+	/**
+	 * Current mapper provider
+	 */
 	private static JpaMapperProvider mapperProvider = new JpaMapperProviderImpl() ;
 	
+	/**
+	 * Set the current mapper provider
+	 * @param provider
+	 */
+	protected static void setMapperProvider(JpaMapperProvider provider) {
+		mapperProvider = provider ;
+	}
+	
+	/**
+	 * Returns the current mapper provider
+	 * @return
+	 */
 	public static JpaMapperProvider getMapperProvider() {
 		return mapperProvider;
 	}
