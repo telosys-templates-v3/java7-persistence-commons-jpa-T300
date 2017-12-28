@@ -6,6 +6,7 @@
 package ${target.javaPackageFromFolder($TEST_SRC)};
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
 import ${ROOT_PKG}.data.record.${recordClass};
@@ -64,6 +65,8 @@ public abstract class ${entity.name}MappingGenericTest {
     	$jpaRecordClass entity = mapper.mapRecordToEntity(pojo1);
     	$recordClass pojo2 = mapper.mapEntityToRecord(entity);
     	checkValues(pojo1, pojo2);
+    	// Test null 
+    	assertNull(mapper.mapRecordToEntity(null));
 	}
 	
 	protected void testEntityMapping() {
@@ -73,6 +76,8 @@ public abstract class ${entity.name}MappingGenericTest {
 		$recordClass pojo = mapper.mapEntityToRecord(entity1);
 		$jpaRecordClass entity2 = mapper.mapRecordToEntity(pojo);
     	checkValues(entity1, entity2);
+    	// Test null 
+    	assertNull(mapper.mapEntityToRecord(null));
 	}
 	
 }
