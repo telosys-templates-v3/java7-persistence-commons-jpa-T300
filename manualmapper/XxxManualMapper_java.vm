@@ -18,25 +18,21 @@ public class ${entity.name}ManualMapper implements JpaMapper<${jpaRecordClass}, 
 
 	@Override
 	public ${recordClass} mapEntityToRecord(${jpaRecordClass} entity) {
+		if ( entity == null ) return null ;
 		${recordClass} pojo = new ${recordClass}();
 #foreach( $attribute in $entity.attributes )
 		pojo.${attribute.setter}(entity.${attribute.getter}()); 
 #end
-##		pojo.setId(entity.getId());
-##		pojo.setName(entity.getName());
-##		pojo.setDriver(entity.getDriver());
 		return pojo;
 	}
 
 	@Override
 	public ${jpaRecordClass} mapRecordToEntity(${recordClass} pojo) {
+		if ( pojo == null ) return null ;
 		${jpaRecordClass} entity = new ${jpaRecordClass}();
 #foreach( $attribute in $entity.attributes )
 		entity.${attribute.setter}(pojo.${attribute.getter}()); 
 #end
-##		entity.setId(pojo.getId());
-##		entity.setName(pojo.getName());
-##		entity.setDriver(pojo.getDriver());
 		return entity;
 	}
 
