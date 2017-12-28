@@ -2,7 +2,9 @@
 #parse("include/java_header.vm")
 package ${target.javaPackageFromFolder($SRC)};
 
-import ${jpaMapperPackage}.modelmapper.JpaMapperProviderImpl;
+// Choose you mapper implementation here
+// import ${jpaMapperPackage}.modelmapper.JpaMapperProviderImpl;
+import ${jpaMapperPackage}.manual.JpaMapperProviderImpl;
 
 /**
  * Use this class to choose your prefered mapping implementation 
